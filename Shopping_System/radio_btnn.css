@@ -1,0 +1,47 @@
+/* Checkbox'lar için stil */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Çok sayıda checkbox olduğunda alt satıra geçmesini sağlar */
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-container label {
+    margin-right: 10px; /* İstenilen boşluk miktarı */
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.checkbox-container label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; /* Checkbox'ın genişliği */
+    height: 18px; /* Checkbox'ın yüksekliği */
+    border: 2px solid #bbb5ff; /* Checkbox kenar rengi */
+    background-color: white; /* Checkbox arkaplan rengi */
+    transition: background-color 0.3s;
+}
+
+.checkbox-container label:hover:before {
+    background-color: #f0f0f0;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label:before {
+    background-color: #bbb5ff;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label:after {
+    content: '\2713'; /* Check işareti karakteri */
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    color: #fff; /* Check işareti rengi */
+}

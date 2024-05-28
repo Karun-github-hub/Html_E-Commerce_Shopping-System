@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Administration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="Logo_violet.webp"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="radio_btnn.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+	
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="container-menu-desktop">
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+					
+					<!-- Logo desktop -->		
+					<a href="#" class="logo">
+						<img src="Logo_violet.webp" alt="IMG-LOGO">
+					</a>
+
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li class="active-menu">
+								<a href="administration.html">Administration</a>
+							</li>
+                            <li>
+								<a href="statistics.php">Statistics</a>
+							</li>
+						</ul>
+					</div>
+                <div class="wrap-icon-header flex-w flex-r-m">
+                    </div>
+                        <a href="login.html" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11" >
+                            <i class='bx bx-log-out'></i>
+                        </a>
+                    </div>
+                </div>    		
+				</nav>
+			</div>	
+		</div>
+        <!-- Icon header -->
+		
+        		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo moblie -->		
+			<div class="logo-mobile">
+				<a href="myaccount.html"><img src="Logo_violet.webp" alt="IMG-LOGO"></a>
+			</div>
+		</div>
+        
+	</header>
+
+    	<!-- Modal Account Variables -->
+		<section class="bg0 p-t-104 p-b-116">
+                <div class="container">
+                <div class="flex-w flex-tr">
+                    <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                        <form action="product_register.php" method="post" enctype="multipart/form-data"> 
+                            <h4 class="mtext-105 cl2 txt-center p-b-30">
+                                ADMINISTRATION PAGE
+                            </h4> 
+                            <div class="comment-box" >
+                                <label for="fname1">Product Name: <input type="text" id="PRDCT_NAME" name="PRDCT_NAME" required></label>
+                                <label for="fname2">Category:  <input type="text" id="CATEGORY_NAME" name="CATEGORY_NAME" required> </label>
+                                <label for="fname3">Product Price:  <input type="text" class="plh3" id="UNIT_PRICE" name="UNIT_PRICE" required> </label>
+                                <label for="fname4">Colour:  <input type="text" id="COLOUR_NAME" name="COLOUR_NAME" required>  </label>
+                                <label for="fname5">Company:  <input type="text" id="CMP_NAME" name="CMP_NAME" required> </label>
+                                                
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="checkbox1" name="SIZE_NAME[]" value="Small">
+                                <label for="checkbox1">  hhıS</label>
+                            
+                                <input type="checkbox" id="checkbox2" name="SIZE_NAME[]" value="Medium">
+                                <label for="checkbox2"> hhıM</label>
+                            
+                                <input type="checkbox" id="checkbox3" name="SIZE_NAME[]" value="Large">
+                                <label for="checkbox3"> hhıL</label>
+                            
+                                <input type="checkbox" id="checkbox4" name="SIZE_NAME[]" value="X-Large">
+                                <label for="checkbox4"> hhıX-L</label>
+                            </div>
+
+
+                            
+                                Description
+                                <textarea for="fname" name="PRDCT_DESC" id="PRDCT_DESC"></textarea>
+                                <span class="button-space"></span>                
+                                    <button onclick="myFunction()" name="sub" id="sub">Submit</button>
+                                <span class="button-space" ></span> 
+                                    <button onclick="myFunction()" name="del" id="del">Delete</button>
+                            </div> 
+			                    </div>
+                                <div class="size-210 bor10 flex-w flex-col-m p-lr-70 p-tb-30 p-lr-15-lg w-full-md">
+                                    <div class="hero">
+                                        <label for="input-file" id="drop-area">
+                                            <input type="file" accept="image/*" id="input-file" name="PRDCT_IMG" hidden>
+                                            <div id="img-view">
+                                                <img src="508-icon.png">
+                                                <p>Drag and drop or click here <br>to upload image </p>
+                                                <span>Upload any images from desktop</span>
+
+                                            </div>
+                                        </label>
+
+                                    </div>
+                          
+                                  
+                            </div>
+                        </form>
+                 </section>	
+                
+           
+		    </div>
+	</header>
+
+    
+    <script>
+        // JavaScript kullanarak bir radyo düğmesine tıklandığında diğerlerini kapatma
+        const radioButtons = document.querySelectorAll('input[name="size"]');
+
+        radioButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Diğer radyo düğmelerini kontrol et
+                radioButtons.forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
+    <!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/bootstrap/js/popper.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <script>
+            $(".js-select2").each(function(){
+                $(this).select2({
+                    minimumResultsForSearch: 20,
+                    dropdownParent: $(this).next('.dropDownSelect2')
+                });
+            })
+        </script>
+    <!--===============================================================================================-->
+        <script src="vendor/daterangepicker/moment.min.js"></script>
+        <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/slick/slick.min.js"></script>
+        <script src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/parallax100/parallax100.js"></script>
+        <script>
+            $('.parallax100').parallax100();
+        </script>
+    <!--===============================================================================================-->
+        <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+        <script>
+            $('.gallery-lb').each(function() { // the containers for all your galleries
+                $(this).magnificPopup({
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    gallery: {
+                        enabled:true
+                    },
+                    mainClass: 'mfp-fade'
+                });
+            });
+        </script>
+    <!--===============================================================================================-->
+        <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+        <script src="vendor/sweetalert/sweetalert.min.js"></script>
+        <script>
+            $('.js-addwish-b2').on('click', function(e){
+                e.preventDefault();
+            });
+    
+            $('.js-addwish-b2').each(function(){
+                var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+                $(this).on('click', function(){
+                    swal(nameProduct, "is added to wishlist !", "success");
+    
+                    $(this).addClass('js-addedwish-b2');
+                    $(this).off('click');
+                });
+            });
+    
+            $('.js-addwish-detail').each(function(){
+                var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+    
+                $(this).on('click', function(){
+                    swal(nameProduct, "is added to wishlist !", "success");
+    
+                    $(this).addClass('js-addedwish-detail');
+                    $(this).off('click');
+                });
+            });
+    
+            /*---------------------------------------------*/
+    
+            $('.js-addcart-detail').each(function(){
+                var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+                $(this).on('click', function(){
+                    swal(nameProduct, "is added to cart !", "success");
+                });
+            });
+        
+        </script>
+    <!--===============================================================================================-->
+        <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script>
+            $('.js-pscroll').each(function(){
+                $(this).css('position','relative');
+                $(this).css('overflow','hidden');
+                var ps = new PerfectScrollbar(this, {
+                    wheelSpeed: 1,
+                    scrollingThreshold: 1000,
+                    wheelPropagation: false,
+                });
+    
+                $(window).on('resize', function(){
+                    ps.update();
+                })
+            });
+        </script>
+    <!--===============================================================================================-->
+
+
+
+        <script src="js/main.js"></script>
+    </body>
+    </html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<?php 
+include("log_quest.php");
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="Logo_violet.webp"/>
+    <!--===============================================================================================-->
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <form action="log_quest.php" method="post">
+            <h1>Account Recovery
+            </h1>
+            <div class="input-box">
+                <input type="email" id="USR_MAIL" name="USR_MAIL" placeholder="E-mail" required>
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="USR_SECQUEST" name="USR_SECQUEST" placeholder="What is your secret word?" required>
+                <i class='bx bxs-cake'></i>
+            </div>
+            <button type="submit" onclick="func1()" class="btn" name="sub" id="sub"> Login</button>
+            <div class="register-link">
+                <p>Dont have an Account? <a href="login_register.html"> Register Now!</a></p>
+            </div>
+        </form>     
+    </div>
+</body>
+
+<script>
+    function func1(){
+        var email = document.getElementById("email").value;
+        var login_Question = document.getElementById("login_Question").value;
+        if(email == 'emreokcelen03@gmail.com' && login_Question == 'pasta'){
+            window.location.replace("index.php");
+        }
+        else{
+            alert("invalid e-mail adress or password");
+        }
+    }
+
+
+</script>
+
+
+</html>

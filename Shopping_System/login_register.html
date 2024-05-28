@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="Logo_violet.webp"/>
+    <!--===============================================================================================-->
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <form action="register.php" method="post">
+            <h1>Registeration</h1>
+            <div class="input-box">
+                <input type="email" id="USR_MAIL" name="USR_MAIL" placeholder="E-mail" required>
+                <i class='bx bxl-gmail' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="USR_NAME" name="USR_NAME" placeholder="Username" required>
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="USR_SECQUEST" name="USR_SECQUEST" placeholder="Secret Code" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="USR_PASSWORD" name="USR_PASSWORD" placeholder="Password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <button type="submit" onclick="func1()" class="btn">Register Now</button>
+            <div class="register-link">
+                <p>Do you have an Account? <a href="login.html"> Login Now!</a></p>
+            </div>
+        </form>     
+    </div>
+</body>
+
+
+<script>
+    function func1(){
+        var email = document.getElementById("email").value;
+        var Username = document.getElementById("Username").value;
+        var Secret = document.getElementById("Secret").value;
+        var Password = document.getElementById("password").value;
+        window.location.replace("index.php");
+
+    }
+
+
+</script>
+
+</html>

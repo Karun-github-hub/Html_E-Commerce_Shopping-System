@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<?php 
+include("log.php");
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="Logo_violet.webp"/>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->	
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->	
+        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <form action="log.php" method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="email" id="USR_MAIL" name="USR_MAIL" placeholder="E-mail" required>
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="USR_PASSWORD" name="USR_PASSWORD" placeholder="Password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me </label>
+                <a href="login_Question.html">Forgot Password?</a>
+            </div>
+            <button type="submit" onclick="func()" class="btn" name="sub" id="sub">  Login</button>
+            <div class="register-link">
+                <p>Dont have an Account? <a href="login_register.html"> Register Now!</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+    <script>
+        function func(){
+            var USR_MAIL = document.getElementById("USR_MAIL").value;
+            var USR_PASSWORD = document.getElementById("USR_PASSWORD").value;
+            var combo = document.querySelector('.selected').innerText;
+           
+            if (USR_MAIL == 'acarkarun@gmail.com' && USR_PASSWORD == 'karun123' && combo == "Admin") {
+                window.location.replace("administration.html");
+            }  
+            else{
+                alert("invalid e-mail adress or password" );
+            }
+
+        }
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const select = dropdown.querySelector('.select');
+            const caret = dropdown.querySelector('.caret');
+            const menu = dropdown.querySelector('.menu');
+            const options = dropdown.querySelectorAll('.menu li');
+            const selected = dropdown.querySelector('.selected');
+            
+        
+        
+            select.addEventListener('click', () => {
+                select.classList.toggle('select-clicked');
+                caret.classList.toggle('caret-rotate');
+                menu.classList.toggle('menu-open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    selected.innerText = option.innerText;
+                    select.classList.remove('select-clicked');
+                    caret.classList.remove('caret-rotate');
+                    menu.classList.remove('menu-open');
+                    options.forEach(option=> {
+                        options.forEach(option => {
+                            option.classList.remove('active');
+                        });
+                           option.classList.add('active');
+                    });
+                });
+            });
+        });
+
+    </script>
+
+</html>
+
+
